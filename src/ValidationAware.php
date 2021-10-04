@@ -17,7 +17,7 @@ trait ValidationAware
      */
     protected bool $valid = false;
 
-    abstract protected function log(string $message, ?int $level = null): void;
+    abstract protected function log(string $message, ?int $level = null, string|array|null $channel = null): void;
 
     abstract public function getData(string|array $key = null, mixed $default = null): mixed;
 
