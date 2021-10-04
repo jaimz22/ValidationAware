@@ -1,7 +1,7 @@
 {
   "name": "vertigolabs/validation-aware",
   "description": "validation aware traits",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
@@ -12,7 +12,9 @@
   ],
   "require": {
     "php": ">=8.0.0",
-    "symfony/validator": "5.3.8"
+    "symfony/validator": "5.3.8",
+    "vertigolabs/data-aware": "1.0.0",
+    "vertigolabs/logger-aware": "1.0.3"
   }
   ,
   "require-dev": {

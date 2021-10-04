@@ -9,17 +9,18 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\Constraints\Collection;
 use Symfony\Component\Validator\ConstraintViolationList;
 use Symfony\Component\Validator\Validation;
+use VertigoLabs\DataAware\DataAware;
+use VertigoLabs\LoggerAware\LoggerAware;
 
 trait ValidationAware
 {
+    use LoggerAware;
+    use DataAware;
+
     /**
      * @var bool The current validity status
      */
     protected bool $valid = false;
-
-    abstract protected function log(string $message, ?int $level = null, string|array|null $channel = null): void;
-
-    abstract public function getData(string|array $key = null, mixed $default = null): mixed;
 
     /**
      * Returns a collection of validation constraints
@@ -47,6 +48,7 @@ trait ValidationAware
      * Validates input data.
      *
      * @return ConstraintViolationList
+     * @throws \VertigoLabs\DataAware\Exceptions\DataNotFoundNoDefaultException
      */
     final public function validate(): ConstraintViolationList
     {
