@@ -1,0 +1,26 @@
+{
+  "name": "vertigolabs/validation-aware",
+  "description": "validation aware traits",
+  "version": "1.0.0",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "James Murray",
+      "email": "jaimz@vertigolabs.org"
+    }
+  ],
+  "require": {
+    "php": ">=8.0.0",
+    "symfony/validator": "5.3.8"
+  }
+  ,
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "autoload": {
+    "psr-4": {
+      "VertigoLabs\\ValidationAware\\": "src"
+    }
+  }
+}
