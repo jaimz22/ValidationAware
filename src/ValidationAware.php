@@ -19,7 +19,7 @@ trait ValidationAware
 
     abstract protected function log(string $message, ?int $level = null): void;
 
-    abstract public function getData($directive = null, $default = null);
+    abstract public function getData(string|array $key = null, mixed $default = null): mixed;
 
     /**
      * Returns a collection of validation constraints
